@@ -19,6 +19,20 @@ function loadStatus() {
   setText("version", config.version || "0.0.0");
   setText("confidence", config.developerConfidence || "Not measured");
   setText("statusText", config.statusText || "Waiting for coffee.");
+  setText("supportContact", config.supportContact || "Not available");
+  setText("releaseChannel", config.releaseChannel || "Not set");
+}
+
+function copyCurrentMessage() {
+  var messageElement = document.getElementById("message");
+  var text = messageElement ? messageElement.textContent : "";
+  var feedback = document.getElementById("copyFeedback");
+
+  navigator.clipboard.writeText(text).then(function () {
+    if (feedback) feedback.textContent = "Copied to clipboard.";
+  }).catch(function () {
+    if (feedback) feedback.textContent = "Copy failed. Please copy manually.";
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {

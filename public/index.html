@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +10,7 @@
   <script src="./messages.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
+
 <body>
   <main class="appShell">
     <section class="hero" aria-labelledby="appTitle">
@@ -34,6 +36,14 @@
         <span>Current status</span>
         <strong id="statusText">Loading</strong>
       </div>
+      <div>
+        <span>Support contact</span>
+        <strong id="supportContact">Loading</strong>
+      </div>
+      <div>
+        <span>Release channel</span>
+        <strong id="releaseChannel">Loading</strong>
+      </div>
     </section>
 
     <section class="generator" aria-live="polite">
@@ -43,18 +53,22 @@
         <button id="excuseButton" type="button">Something broke. Explain yourself.</button>
         <button id="solutionButton" class="secondary" type="button">Generate Technical Solution</button>
         <button id="panicButton" class="secondary warning" type="button">Panic</button>
+        <button id="copyButton" class="secondary" type="button">Copy current message</button>
       </div>
+      <p id="copyFeedback" role="status" aria-live="polite"></p>
     </section>
 
-<section class="note">
-  <h2>Static website safety note</h2>
-  <p>Anything delivered to a browser is visible to the user. Never place passwords, API keys or private secrets in a static website.</p>
-</section>
+    <section class="note">
+      <h2>Static website safety note</h2>
+      <p>Anything delivered to a browser is visible to the user. Never place passwords, API keys or private secrets in a
+        static website.</p>
+    </section>
 
-<section class="note">
-  <h2>About this generator</h2>
-  <p>This generator was presented to you by Laura Moreau from English Proficiency.</p>
-</section>
+    <section class="note">
+      <h2>About this generator</h2>
+      <p>This generator was presented to you by Laura Moreau from English Proficiency.</p>
+    </section>
   </main>
 </body>
+
 </html>
